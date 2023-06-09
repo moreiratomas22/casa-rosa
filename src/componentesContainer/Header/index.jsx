@@ -4,7 +4,7 @@ import {Titulo} from "../../componentes";
 import "./style.css";
 
 const Header = () => {
-    const title = "Casa Rosa";
+    const title = "CASA ROSA";
     const subTitle = "Destileria Artesanal";
 
     return (
