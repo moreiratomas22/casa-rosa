@@ -1,16 +1,35 @@
 import React from "react";
-import {Titulo} from "../../componentes";
+import { Titulo, NavBar } from "../../componentes";
 
 import "./style.css";
 
 const Header = () => {
-    const title = "CASA ROSA";
-    const subTitle = "Destileria Artesanal";
-
-    return (
-        <div><Titulo title={title} subTitle={subTitle}/> </div>
-    )
-
-}
+  const title = "CASA ROSA";
+  const subTitle = "Destileria Artesanal";
+  const directions = [
+    {
+      name: "Inicio",
+      path: "/",
+    },
+    {
+      name: "Nosotros",
+      path: "/nosotros",
+    },
+    {
+      name: "Productos",
+      path: "/productos",
+    },
+    {
+      name: "Menu",
+      path: "/menu",
+    },
+  ];
+  return (
+    <header>
+      <Titulo title={title} subTitle={subTitle} />
+      <NavBar directions={directions}/>
+    </header>
+  );
+};
 
 export default Header;

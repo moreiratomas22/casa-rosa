@@ -4,7 +4,7 @@ import "./style.css";
 
 const Main = () => {
     return (
-        <div> Main </div>
+        <div> Holis </div>
     )
 
 }
