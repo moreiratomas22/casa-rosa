@@ -1,18 +1,22 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const NavBar = ({directions}) => {
-    console.log(directions)
+const NavBar = ({ directions }) => {
     return (
         <nav>
-            {directions.map(item => {
-                
-                return (<NavLink to={item.path}>
-                    item.name
-                </NavLink>)
-            })}
+            {directions.length > 0 ? (
+                directions.map(item => {
+                    return (
+                        <NavLink key={item.path} to={item.path}>
+                            {item.name}
+                        </NavLink>
+                    )
+                })
+            ) : (
+                null
+            )}
         </nav>
-    ),
+    )
 }
 
 export default NavBar;
